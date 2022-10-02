@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dojo Survey</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body class="d-flex justify-content-center" style="height:1000px;">
+        <div class="d-flex flex-column bg-dark p-5 text-light" style="width: 35%; height:80%;">
+            <h1 class="text-warning">Dojo Survey</h1>
+            <form action="/process" class="d-flex flex-column gap-2 " method="post">
+                <label for="name">Name:</label>
+                <input type="text" name="name" class="rounded-2 form-control" >
+                <label for="location">Dojo Location:</label>
+                <select name="location" id="" class="rounded-2 form-select">
+                    <option value="-- Select A Location --">-- Select A Location --</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Online">Online</option>
+                    <option value="Burbank">Burbank</option>
+                    <option value="Bellevue">Bellevue</option>
+                </select>
+                <label for="language">Favorite Language:</label>
+                <select name="language" id="" class="rounded-2 form-select">
+                    <option value="-- Select A Language --">-- Select A Language --</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScipt">JavaScipt</option>
+                    <option value="Python">Python</option>
+                    <option value="C#">C#</option>
+                </select>
+                <label for="comments">Comments (optional):</label>
+                <textarea name="comments" id="" cols="30" rows="13" class="rounded-2"></textarea>
+                <div >
+                    <input type="checkbox">
+                    <label for="name_check">Name</label>
+                    <input type="checkbox">
+                    <label for="name_check">Location</label>
+                    <input type="checkbox">
+                    <label for="name_check">Language</label>
+                </div>
+                <input type="submit" value="Submit" class="btn btn-warning rounded-1" style="width: 20%;">
+            </form>
+        </div>
+    </body>
+</html>
